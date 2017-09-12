@@ -1,0 +1,2 @@
+# Use the local R library
+R_LIBS_USER="~/.local/lib/R/site-library"
