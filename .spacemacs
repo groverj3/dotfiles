@@ -318,6 +318,7 @@ you should place your code here."
   (add-hook 'ess-mode-hook
             (lambda ()
               (ess-toggle-underscore nil)))
+  (setq python-shell-interpreter "ipython3")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
