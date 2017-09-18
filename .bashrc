@@ -124,5 +124,5 @@ if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
 
-# Make sure the terminal is in 256 color mode
-export TERM=xterm-256color
+# Make sure the terminal is in 256 color mode, commented out to fix tmux scrolling problems in nano
+# export TERM=xterm-256color
