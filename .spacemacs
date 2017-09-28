@@ -51,8 +51,9 @@ values."
      version-control
      python
      (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+            shell-default-height -100
+            shell-default-position 'right
+            shell-default-full-span nil)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -319,6 +320,7 @@ you should place your code here."
             (lambda ()
               (ess-toggle-underscore nil)))
   (setq python-shell-interpreter "ipython3")
+  (setq flycheck-shellcheck-follow-sources nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
