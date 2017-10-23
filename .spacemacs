@@ -76,8 +76,10 @@ values."
 (defun dotspacemacs/init ()
   "Initialization function.
 This function is called at the very startup of Spacemacs initialization
-before layers configuration.
-You should not put any user code in there besides modifying the variable
+before layers configuratio
+   ;; The leader key
+   dotspacemacs-leader-key "SPC"n.
+You should not put an(turn-on-fci-mode)y user code in there besides modifying the variable
 values."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
@@ -314,12 +316,35 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; ----------------------------------------------------------------
+  ;; General Spacemacs Configuration
+  ;; ----------------------------------------------------------------
+
+  ;; Set neotree toggle to f8
   (global-set-key [f8] 'neotree-toggle)
+  ;; Show neotree by default
   (neotree-show)
+  ;; Turn on fci-mode globally
+  (define-globalized-minor-mode global-fci-mode fci-mode
+    (lambda () (fci-mode 1)))
+  (global-fci-mode 1)
+  ;; Stop creating lockfiles, they confuse git
+  (setq-default create-lockfiles nil)
+  ;; Enable editing of compressed files
+  (auto-compression-mode 1)
+
+  ;; ----------------------------------------------------------------
+  ;; Configuration for Layers
+  ;; ----------------------------------------------------------------
+
+  ;; Fix assignment operator for R language '<-'
   (add-hook 'ess-mode-hook
             (lambda ()
               (ess-toggle-underscore nil)))
+  ;; Use the ipython interpreter
   (setq python-shell-interpreter "ipython3")
+  ;; Stop flycheck from following sources, unsupported in current version
   (setq flycheck-shellcheck-follow-sources nil)
   )
 
