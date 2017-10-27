@@ -76,10 +76,8 @@ values."
 (defun dotspacemacs/init ()
   "Initialization function.
 This function is called at the very startup of Spacemacs initialization
-before layers configuratio
-   ;; The leader key
-   dotspacemacs-leader-key "SPC"n.
-You should not put an(turn-on-fci-mode)y user code in there besides modifying the variable
+before layers configuration.
+You should not put any user code in there besides modifying the variable
 values."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
