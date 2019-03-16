@@ -1,5 +1,5 @@
 # This .bashrc is for Ubuntu (and its derivatives). Using it on other systems
-# may result in sadness and gnashing of teeth.
+# may result in sadness and gnashing of teeth. Remove the .ubuntu before use.
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
