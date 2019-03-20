@@ -464,14 +464,14 @@ before packages are loaded."
   ;; General Spacemacs Configuration
   ;; ----------------------------------------------------------------
 
-  ;; Set neotree toggle to f8
-  (global-set-key [f8] 'neotree-toggle)
-  ;; Show neotree by default
-  (neotree-show)
+  ;; Set neotree toggle to f8 - Not working After Switch to dev branch
+  ;; (global-set-key [f8] 'neotree-toggle)
+  ;; Show neotree by default - Not working After Switch to dev branch
+  ;; (neotree-show)
   ;; Uncomment to turn on fci-mode globally, but it's kind of buggy
   ;; (define-globalized-minor-mode global-fci-mode fci-mode
   ;;     (lambda () (fci-mode 1)))
-  (global-fci-mode 1)
+  ;; (global-fci-mode 1)
   ;; Stop creating lockfiles, they confuse git
   (setq-default create-lockfiles nil)
   ;; Enable editing of compressed files
