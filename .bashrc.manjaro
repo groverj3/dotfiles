@@ -160,7 +160,12 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# Put aliases in separate file
+# some ls aliases like Ubuntu
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Put more aliases in separate file
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
