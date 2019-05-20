@@ -1,2 +1,5 @@
+# .Renviron is run every time a new R session is started
+# Use .Renviron to set environment variables for R
+
 # Use the local R library
 R_LIBS_USER="~/.local/lib/R/site-library"
