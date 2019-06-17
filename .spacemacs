@@ -45,6 +45,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      (ess :variables
           ess-enable-smart-equals t)
+     html
      markdown
      multiple-cursors
      treemacs
