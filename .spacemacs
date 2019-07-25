@@ -471,6 +471,7 @@ before packages are loaded."
    ;; general indentation rules
    indent-tabs-mode nil
    c-basic-offset 4
+   tab-width 4
    )
 
   ;; ----------------------------------------------------------------
