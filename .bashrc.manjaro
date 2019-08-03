@@ -151,6 +151,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # Add the user's home bin to PATH
 export PATH="$HOME/bin:$PATH"
 
+# Add gopath to PATH
+export GOPATH="$HOME/Development/go/"
+
 # Add pyenv installation to PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
