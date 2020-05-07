@@ -12,4 +12,4 @@ alias lv='ls -v'
 alias l='ls -CF'
 
 # Update python --user packages
-alias pip_upgrade='pip list --outdated -v | grep "home" | cut -d " " -f 1 | xargs pip install -U --user'
+alias pip_upgrade='pip list --outdated | tail -n + 3 | cut -d " " -f 1 | xargs pip install -U'
