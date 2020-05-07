@@ -11,5 +11,5 @@ alias la='ls -A'
 alias lv='ls -v'
 alias l='ls -CF'
 
-# Update python --user packages
+# Update python packages, best used with pyenv
 alias pip_upgrade='pip list --outdated | tail -n + 3 | cut -d " " -f 1 | xargs pip install -U'
