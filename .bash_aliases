@@ -12,4 +12,9 @@ alias lv='ls -v'
 alias l='ls -CF'
 
 # Update python packages, best used with pyenv
-alias pip_upgrade='pip list --outdated | tail -n + 3 | cut -d " " -f 1 | xargs pip install -U'
+alias pip_upgrade='pip list --outdated | tail -n +3 | cut -d " " -f 1 | xargs pip install -U'
+
+# Update R packages
+# Best used with a .Renviron specifying a site-library
+# Also recommended to use a .Rprofile specifying a CRAN mirror
+alias R_upgrade='R -e "update.packages(ask = FALSE)"'
