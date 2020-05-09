@@ -51,12 +51,8 @@ This function should only modify configuration layer settings."
      neotree
      shell
      shell-scripts
-     ;; spell-checking
      syntax-checking
      python
-     ;; git
-     ;; org
-     ;; version-control
      yaml
      )
 
