@@ -17,4 +17,5 @@ alias pip_upgrade='pip list --outdated | tail -n +3 | cut -d " " -f 1 | xargs pi
 # Update R packages
 # Best used with a .Renviron specifying a site-library
 # Also recommended to use a .Rprofile specifying a CRAN mirror
-alias R_upgrade='R -e "update.packages(ask = FALSE)"'
+# Because I usually have some Bioconductor packages installed, also upgrade those
+alias R_upgrade='R -e "update.packages(ask = FALSE); BiocManager::install(ask = FALSE)"'
