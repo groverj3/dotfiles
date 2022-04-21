@@ -27,6 +27,6 @@ eval "$(pyenv init -)"
 
 # Put more aliases in separate file
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
