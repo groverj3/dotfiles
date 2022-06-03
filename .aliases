@@ -4,12 +4,13 @@
 
 ### Other useful shell aliases
 
+# dirs without -v is pretty lame
+alias dirs='dirs -v'
+
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alhF'
 alias lh='ls -alhF'
 alias la='ls -A'
-alias lv='ls -v'
-alias l='ls -CF'
 
 # Update python packages, best used with pyenv
 alias pip_upgrade='pip install -U pip && pip list --outdated | tail -n +3 | cut -d " " -f 1 | xargs pip install -U'
