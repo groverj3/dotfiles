@@ -116,3 +116,6 @@ fi
 
 # Initialize pyenv for log-in shells
 eval "$(pyenv init -)"
+
+# Enable gpg to ask for passphrase from a terminal
+export GPG_TTY=$TTY
