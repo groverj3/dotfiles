@@ -7,6 +7,9 @@
 # dirs without -v is pretty lame
 alias dirs='dirs -v'
 
+# I only ever use df -h
+alias df='df -h'
+
 # some more ls aliases
 alias ll='ls -alhF'
 alias lh='ls -alhF'
