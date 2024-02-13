@@ -18,8 +18,8 @@ alias la='ls -A'
 # Update python packages, best used with pyenv
 alias pip_upgrade='pip install -U pip && pip list --outdated | tail -n +3 | cut -d " " -f 1 | xargs pip install -U'
 
-# Update R packages
+# Update R packages that are in the user's /home directory, excluding ones installed by sysadmin
 # Best used with a .Renviron specifying a site-library
 # Also recommended to use a .Rprofile specifying a CRAN mirror
 # Because I usually have some Bioconductor packages installed, also upgrade those
-alias R_upgrade='R -e "update.packages(ask = FALSE); BiocManager::install(ask = FALSE)"'
+alias R_upgrade='R -e "update.packages(rownames(installed.packages()[startsWith(installed.packages()[, \"LibPath\"], \"/home\"), ]), ask = FALSE); BiocManager::install(ask = FALSE)"'
