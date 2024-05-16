@@ -1,4 +1,4 @@
-# .Rprofile is run every tie a new R session starts
+# .Rprofile is run every time a new R session starts
 
 # Use the posit package manager for binary packages
 # Select a CRAN mirror so it doesn't ask every time
@@ -12,3 +12,10 @@ local({
     repos = r,
     HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])))
 })
+
+# Configure BioCManager to use Posit Package Manager:
+options(BioC_mirror = "https://packagemanager.posit.co/bioconductor")
+options(BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/config.yaml")
+
+# Configure a CRAN snapshot compatible with Bioconductor 3.20:
+options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/jammy/latest"))

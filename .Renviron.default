@@ -2,4 +2,5 @@
 # Use .Renviron to set environment variables for R
 
 # Use the local R library
+# This is only necessary if R hasn't been installed through rig
 R_LIBS_USER="~/.local/lib/R/site-library"
