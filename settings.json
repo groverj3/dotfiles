@@ -1,0 +1,17 @@
+// VSCode Settings
+// Place in ~/.config/{VSCode Path}/User
+{
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.detectIndentation": false,
+    "editor.rulers": [
+        79,
+        100
+    ],
+
+    // Language-specific settings
+    "[python]": {"editor.tabSize": 4},
+    "[shellscript]": {"editor.tabSize": 2},
+    "[nextflow]": {"editor.tabSize": 4},
+    "[nextflow-config]": {"editor.tabSize": 4},
+    "[r]": {"editor.tabSize": 2},
+}
