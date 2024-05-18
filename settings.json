@@ -14,4 +14,5 @@
     "[nextflow]": {"editor.tabSize": 4},
     "[nextflow-config]": {"editor.tabSize": 4},
     "[r]": {"editor.tabSize": 2},
+    "[markdown]": {"editor.tabSize": 4}
 }
