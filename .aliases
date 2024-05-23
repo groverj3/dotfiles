@@ -23,3 +23,12 @@ alias pip_upgrade='pip install -U pip && pip list --outdated | tail -n +3 | cut 
 # Also recommended to use a .Rprofile specifying a CRAN mirror
 # Because I usually have some Bioconductor packages installed, also upgrade those
 alias R_upgrade='R -e "update.packages(oldPkgs = rownames(installed.packages()[startsWith(installed.packages()[, \"LibPath\"], \"/home\"), ]), ask = FALSE); BiocManager::install(ask = FALSE)"'
+
+# Update .gitignore to exclude files too large for git
+# Excludes renv and .ipynb_checkpoints which I should've already put in .gitignore, and I never send them to git anyway
+alias gitignore_big_files='find . -size +50M -not \( -path "./renv/*" \) -not \( -path "./.ipynb_checkpoints/*" \) >> .gitignore'
+
+# rsync files, but ignore ones that are above 50MB
+# Typically used in a situation where you're copying to a git repo and don't want to include large files
+# Target dir goes on the end here since shell aliases can't take arguments
+alias rsync_ignore_big_files='rsync -avh --progress --max-size=50M ./* '
