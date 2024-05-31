@@ -26,7 +26,8 @@ alias R_upgrade='R -e "update.packages(oldPkgs = rownames(installed.packages()[s
 
 # Update .gitignore to exclude files too large for git
 # Excludes renv and .ipynb_checkpoints which I should've already put in .gitignore, and I never send them to git anyway
-alias gitignore_big_files='find . -size +50M -not \( -path "./renv/*" \) -not \( -path "./.ipynb_checkpoints/*" \) >> .gitignore'
+# Deduplicates the lines in the .gitignore file based on: https://unix.stackexchange.com/a/504047
+alias gitignore_big_files='find . -size +50M -not \( -path "./renv/*" \) -not \( -path "./.ipynb_checkpoints/*" \) >> .gitignore; cat -n .gitignore | sort -uk2 | sort -nk1 | cut -f2-'
 
 # rsync files, but ignore ones that are above 50MB
 # Typically used in a situation where you're copying to a git repo and don't want to include large files
