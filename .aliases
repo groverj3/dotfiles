@@ -32,4 +32,4 @@ alias gitignore_big_files='find . -size +50M -not \( -path "./renv/*" \) -not \(
 # rsync files, but ignore ones that are above 50MB
 # Typically used in a situation where you're copying to a git repo and don't want to include large files
 # Target dir goes on the end here since shell aliases can't take arguments
-alias rsync_ignore_big_files='rsync -avh --progress --max-size=50M ./* '
+alias rsync_ignore_big_files='rsync -avh --progress --max-size=50M ./ '
