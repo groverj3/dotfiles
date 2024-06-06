@@ -3,7 +3,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Initialize the pyenv installation
-eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
